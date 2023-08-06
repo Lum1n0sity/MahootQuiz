@@ -1,0 +1,829 @@
+* { 
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: block;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Image/Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+header {
+    background: #da7c09;
+    padding: 20px;
+    height: 8rem;
+    width:  100%;
+    z-index: 1;
+}
+
+#logo {
+    font-family: 'Monoton';
+    text-decoration:  none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 217, 160);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    font-size: 4rem;
+    position: absolute;
+    left: 1rem;
+    top: .9rem;
+    transition: .5s;
+    z-index: 1;
+}
+
+#logo:hover {
+    background-color: rgb(255, 203, 126);
+    transition: .5s;
+    z-index: 1;
+}
+
+#home {
+    font-size: 5rem;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: .9rem;
+    right: 26rem;
+    z-index: 1;
+}
+
+#add {
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position:  absolute;
+    top: 1rem;
+    right: 19rem;
+    z-index: 1;
+}
+
+#create_account_header {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 5rem;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: 1rem;
+    right: 12rem;
+    z-index: 1;
+}
+
+#search_bar {
+    background-color: white;
+    width: 35rem;
+    height: 4rem;
+    border-radius: 10rem;
+    position: absolute;
+    right: 39.9rem;
+    top: 20rem;
+    z-index: 1;
+}
+
+#search_input {
+    font-size: xx-large;
+    width: 29rem;
+    outline: none;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10rem;
+    height: 2.5rem;
+    padding-left: .3rem;
+    position: relative;
+    top: .6rem;
+    left: .8rem;
+    z-index: 1;
+}
+
+#search_input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('Image/close-outline.svg');
+    background-size: 6;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#search_btn {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: .5rem;
+    right: 1.3rem;
+    z-index: 1;
+}
+
+#search_btn_i {
+    height: 3rem;
+    width: 3rem;
+    z-index: 1;
+}
+
+#login_menu_bar {
+    font-size: 5rem;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: .9rem;
+    right: 5rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    transition: .5s;
+}
+
+#login_menu_bar_close {
+    display: none;
+    font-size: 4rem;
+    color: black;
+    text-decoration: none;
+    position: fixed;
+    top: .2rem;
+    right: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    transition: .5s;
+}
+
+#login_menu {
+    background-color: rgb(56, 56, 56);
+    height: 100%;
+    width: 31rem;
+    position: fixed;
+    top: 0rem;
+    right: -30rem;
+    z-index: 2;
+    transition: .5s;
+}
+
+#login_h2 {
+    color: #ff9615;
+    font-size: xxx-large;
+    position: relative;
+    top: 3rem;
+    left: 11rem;
+    pointer-events: none;
+}
+
+#Login_Username_Input {
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    position: relative;
+    left: 3rem;
+    top: 5rem;
+    background-color: #da7c09;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#Login_Password_Input {
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    position: relative;
+    left: 3rem;
+    top: 10rem;
+    background-color: #da7c09;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#Login_Username_Input[type="text"]::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.788);
+}
+
+#Login_Password_Input[type="password"]::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.788);
+}
+
+#UserName_lable {
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    top: 6.2rem;
+    left: 3rem;
+}
+
+#Password_lable {
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    top: 12.5rem;
+    left: 3rem;
+}
+
+#create_acc {
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    top: 12rem;
+    left: 3rem;
+}
+
+#switchto_create_btn {
+    cursor: pointer;
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+    top: 10.3rem;
+    left: 3rem;
+}
+
+#Login {
+    color: black;
+    font-weight: bold;
+    font-size: xx-large;
+    position: relative;
+    background-color: #da7c09;
+    border-radius: 10px;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: none;
+    outline: none;
+    top: 16rem;
+    left: -1rem;
+}
+
+#Login:hover {
+    background-color: #af6305;
+}
+
+#create_menu {
+    display: block;
+    background-color: rgb(56, 56, 56);
+    height: 100%;
+    width: 31rem;
+    position: fixed;
+    top: 0rem;
+    right: -30rem;
+    z-index: 2;
+    transition: .5s;
+}
+
+#Create_h2{
+    color: #ff9615;
+    font-size: xxx-large;
+    position: relative;
+    top: 3rem;
+    left: 3rem;
+    pointer-events: none;
+}
+
+#Create_EMail_Input {
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    position: relative;
+    left: 3rem;
+    top: 4rem;
+    background-color: #da7c09;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#Create_Username_Input {
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    position: relative;
+    left: 3rem;
+    top: 7.4rem;
+    background-color: #da7c09;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#Create_Password_Input {
+    outline: none;
+    border: none;
+    height: 3rem;
+    width: 20rem;
+    position: relative;
+    left: 3rem;
+    top: 10.5rem;
+    background-color: #da7c09;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#Create_EMail_Input[type="email"]::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.788);
+}
+
+#Create_Username_Input[type="text"]::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.788);
+}
+
+#Create_Password_Input[type="password"]::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.788);
+}
+
+#Create_EMail_lable {
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    top: 7.4rem;
+    left: 3rem;
+}
+
+#Create_Username_lable {
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    top: 12rem;
+    left: 3rem;
+}
+
+#Create_Password_lable {
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    top: 16.4rem;
+    left: 3rem;
+}
+
+#login_acc {
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    top: 12rem;
+    left: 3rem;
+}
+
+#switchto_Login_btn {
+    cursor: pointer;
+    color: #ff9615;
+    font-size: x-large;
+    position: relative;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+    top: 10.5rem;
+    left: 3rem;
+}
+
+#Create {
+    color: black;
+    font-weight: bold;
+    font-size: xx-large;
+    position: relative;
+    background-color: #da7c09;
+    border-radius: 10px;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: none;
+    outline: none;
+    top: 16rem;
+    left: 1rem;
+}
+
+#Create:hover {
+    background-color: #af6305;
+}
+
+#nav_menu {
+    display: block;
+}
+
+.custom-shape-divider-top-1685236463 {
+    position: absolute;
+    top: rem;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1685236463 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 191px;
+    z-index: 1;
+}
+
+.custom-shape-divider-top-1685236463 .shape-fill {
+    fill: #da7c09;
+}
+
+#nav_menu_btn {
+    display: none;
+    font-size: 4rem;
+    color: black;
+    text-decoration: none;
+    position: fixed;
+    top: .2rem;
+    right: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    transition: .5s;
+}
+
+#nav_menu {
+    display: none;
+    list-style-type: none;
+    background-image: url('Image/Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0rem;
+    width: 100%;
+    left: 0rem;
+    height: 100%;
+    z-index: 2;
+}
+
+#logo_menu {
+    font-family: 'Monoton';
+    text-decoration:  none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 217, 160);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    font-size: xxx-large;
+    font-weight: normal;
+    position: fixed;
+    left: 19vw;
+    top: 20vw;
+    transition: .5s;
+}
+
+#home_menu {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 217, 160);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: xx-large;
+    position: relative;
+    top: 62vw;
+    left: 34vw;
+}
+
+#add_menu {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 217, 160);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: xx-large;
+    position: relative;
+    top: 70vw;
+    left: 25vw;
+}
+
+#search_bar_menu {
+    background-color: white;
+    width: 17rem;
+    height: 3rem;
+    border-radius: 10rem;
+    position: fixed;
+    left: 19vw;
+    top: 95vw;
+    z-index: 1;
+}
+
+#search_input_menu {
+    font-size: x-large;
+    width: 14rem;
+    outline: none;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10rem;
+    height: 2.5rem;
+    padding-left: .3rem;
+    position: relative;
+    top: .25rem;
+    left: .25rem;
+    z-index: 1;
+}
+
+#search_input_menu[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('Image/close-outline.svg');
+    background-size: 6;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#search_btn_menu {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    top: 97vw;
+    left: 73vw;
+    z-index: 1;
+}
+
+#login_menu_btn_menu {
+    border: none;
+    outline: none;
+    color: black;
+    background-color: rgb(255, 217, 160);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: xx-large;
+    position: relative;
+    top: 96vw;
+    left: 35vw;
+}
+
+#nav_menu_close {
+    display: none;
+    font-size: 4rem;
+    color: black;
+    text-decoration: none;
+    position: fixed;
+    top: .2rem;
+    right: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    transition: .5s;
+}
+
+#Cat-Mathe {
+    cursor: pointer;
+    border: rgb(210, 210, 210) solid 2px;
+    background-color: rgb(255, 255, 255);
+    color: #686767;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 24.3rem;
+    left: 42rem;
+}
+
+#Cat-Deutsch {
+    cursor: pointer;
+    border: rgb(210, 210, 210) solid 2px;
+    background-color: rgb(255, 255, 255);
+    color: #686767;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 24.3rem;
+    left: 48rem;
+}
+
+#Cat-Englisch {
+    cursor: pointer;
+    border: rgb(210, 210, 210) solid 2px;
+    background-color: rgb(255, 255, 255);
+    color: #686767;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 24.3rem;
+    left: 55.2rem;
+}
+
+#Cat-Andere {
+    cursor: pointer;
+    border: rgb(210, 210, 210) solid 2px;
+    background-color: rgb(255, 255, 255);
+    color: #686767;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 24.3rem;
+    left: 62.6rem;
+}
+
+#News-BG {
+    background-color: rgb(255, 255, 255);
+    border-radius: 59px;
+    position: absolute;
+    top: 30rem;
+    left: 33rem;
+    width: 50rem;
+    height: 30rem;
+}
+
+#News-BG h2 {
+    font-size: xxx-large;
+    position: relative;
+    top: 1rem;
+    left: 17rem;
+}
+
+#News-Title {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    position: relative;
+    top: 3rem;
+    left: 7rem;
+    z-index: 2;
+}
+
+#News-QuickDescription {
+    color: white;
+    font-size: x-large;
+    position: relative;
+    top: 4rem;
+    left: 7rem;
+    z-index: 2;
+}
+
+#News-Img {
+    border-radius: 20px;
+    height: 20rem;
+    width: 40rem;
+    position: absolute;
+    top: 6rem;
+    left: 5rem;
+    filter: brightness(50%);
+    z-index: 1;
+}
+
+#News-Left {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: xxx-large;
+    position: absolute;
+    top: 44rem;
+    left: 34rem;
+}
+
+#News-Right {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: xxx-large;
+    position: absolute;
+    top: 44rem;
+    left: 79rem;
+}
+
+#New-Quiz {
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    width: 15rem;
+    height: 11rem;
+    position: fixed;
+    top: 58rem;
+    left: -35rem;
+    position: relative;
+    z-index: 0;
+}
+
+#Create-New-Quiz {
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 3rem;
+    background-color: rgb(255, 255, 255);
+    width: 13rem;
+    height: 9rem;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+}
+
+#Create-New-Quiz:hover {
+    background-color: lightgrey;
+}
+
+#New-Quiz-Desc {
+    display: none;
+    font-size: x-large;
+    position: relative;
+    bottom: 1.5rem;
+    left: 4rem;
+    z-index: 2;
+}
+
+#Create-New-Quiz:hover + #New-Quiz-Desc {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    #home {
+      display: none;
+    }
+
+    #add {
+        display: none;
+    }
+
+    #search_bar {
+        display: none;
+    }
+
+    #login_menu_bar {
+        display: none;
+    }
+
+    #create_account_header {
+        display: none;
+    }
+
+    #login_menu_bar {
+        display: none;
+    }
+
+    #nav_menu_btn {
+        display: block;
+    }
+}
